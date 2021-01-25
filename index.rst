@@ -12,14 +12,9 @@
 Introduction
 ============
 
-.. image:: logo-128.png
-  :class: float-right
+This document describes the schema for Common Build Specification files. A Common Build Specification file (hereafter "CBS") is a mechanism for describing how users may build and distribute a package. "User" here refers to a build tool, not an end user. CBS deals with building and installing software.
 
-This document describes the schema for Common Package Specification files. A Common Package Specification file (hereafter "CPS") is a mechanism for describing how users may consume a package. "User" here refers to another package, not an end user. CPS deals with *building* software, not *installing* software.
-
-CPS is based on `JSON`_. A CPS file is a valid JSON object.
-
-The official version of the specification is maintained at https://github.com/mwoehlke/cps.
+CBS is largely based on the Common Package Specification (or `CPS`_).
 
 Contents
 ========
@@ -31,7 +26,6 @@ General Information
    :maxdepth: 2
 
    overview
-   history
    development
 
 Core Specification
@@ -44,7 +38,6 @@ Core Specification
    features
    components
    configurations
-   searching
 
 Appendices
 ''''''''''
@@ -54,12 +47,11 @@ Appendices
 
    schema-supplement
    recommendations
-   sample
 
 * :ref:`search`
 
 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
 
-.. _JSON: http://www.json.org/
+.. _CPS: https://github.com/mwoehlke/cps
 
 .. kate: hl reStructuredText

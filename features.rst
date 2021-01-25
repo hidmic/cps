@@ -1,7 +1,7 @@
 Compiler and Linker Features
 ============================
 
-CPS supports a notion of compiler and linker "features", which are used to abstract requirements that consumers of a component modify the default compiler and/or linker behavior in order to deal with functional inconsistencies across tools. While it is ultimately up to the build tool to determine how to map features to tool invocation flags, it is clearly beneficial to attempt to standardize a set of "well known" features. Known features shall be case-insensitive, however compiler specific portions might be case sensitive. (For example, :feature:`warn:error` and :feature:`Warn:Error` are the same feature, but :feature:`warn:foo` and :feature:`warn:Foo` should be treated as different, unless the tool has sufficient knowledge of the compiler to know otherwise.)
+CBS supports a notion of compiler and linker "features", which are used to abstract requirements that modify the default compiler and/or linker behavior in order to deal with functional inconsistencies across tools. While it is ultimately up to the build tool to determine how to map features to tool invocation flags, it is clearly beneficial to attempt to standardize a set of "well known" features. Known features shall be case-insensitive, however compiler specific portions might be case sensitive. (For example, :feature:`warn:error` and :feature:`Warn:Error` are the same feature, but :feature:`warn:foo` and :feature:`warn:Foo` should be treated as different, unless the tool has sufficient knowledge of the compiler to know otherwise.)
 
 Compiler Features
 '''''''''''''''''
@@ -51,12 +51,12 @@ Tools are expected to recognize if a warning is applicable to the compiler and s
 :feature.opt:`no`\ :feature:`warn:error`
 ----------------------------------------
 
-Code using the component should either treat all warnings as errors (:feature:`warn:error`), or should not treat warnings as errors (:feature:`nowarn:error`).
+Tools building and code using the component should either treat all warnings as errors (:feature:`warn:error`), or should not treat warnings as errors (:feature:`nowarn:error`).
 
 :feature.opt:`no`\ :feature:`error:`\ :feature.var:`...`
 --------------------------------------------------------
 
-Code using the component should either enable (:feature:`error`) the specified warning, additionally promoting it to an error, or should not treat the specified warning as an error  (:feature:`noerror`). As with :feature.opt:`no`\ :feature:`warn:`\ :feature.var:`...`, the warnings are compiler specific. Note that :feature:`noerror` traditionally does not indicate whether the specified warning should be issued or not, only that if it is issued, it should not be promoted to an error.
+Tools building and code using the the component should either enable (:feature:`error`) the specified warning, additionally promoting it to an error, or should not treat the specified warning as an error  (:feature:`noerror`). As with :feature.opt:`no`\ :feature:`warn:`\ :feature.var:`...`, the warnings are compiler specific. Note that :feature:`noerror` traditionally does not indicate whether the specified warning should be issued or not, only that if it is issued, it should not be promoted to an error.
 
 Linker Features
 '''''''''''''''
@@ -64,7 +64,7 @@ Linker Features
 :feature:`threads`
 ------------------
 
-Code using the component should be built with run-time threading support. On Windows, this would typically be used to select the multi-threaded CRT library rather than the single-threaded CRT. On POSIX platforms, it typically indicates that the application should be built with ``-pthread``.
+Tools building and code using the component should be built with run-time threading support. On Windows, this would typically be used to select the multi-threaded CRT library rather than the single-threaded CRT. On POSIX platforms, it typically indicates that the application should be built with ``-pthread``.
 
 .. TODO do we need `pic`? `sanitize:<...>`?
 

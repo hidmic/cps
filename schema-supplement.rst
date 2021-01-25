@@ -51,7 +51,7 @@ License identifiers should follow the |SPDX|_ `License List`_. The ``WITH`` oper
 :Type: :type:`string`
 :Applies To: :object:`package`
 
-Provides a description of the file contents, for readers that may not be familiar with CPS files. The typical value is :string:`"Common Package Specification for <package name>"`.
+Provides a description of the file contents, for readers that may not be familiar with CBS files. The typical value is :string:`"Common Package Specification for <package name>"`.
 
 :attribute:`Meta-Schema`
 ------------------------
@@ -59,7 +59,7 @@ Provides a description of the file contents, for readers that may not be familia
 :Type: :type:`string`
 :Applies To: :object:`package`
 
-Provides a URI link to a document describing the format of the CPS file. The typical value is :string:`"https://mwoehlke.github.io/cps/"` (i.e. the top level page of this site).
+Provides a URI link to a document describing the format of the CBS file. The typical value is :string:`"https://mwoehlke.github.io/cps/"` (i.e. the top level page of this site).
 
 :attribute:`Website`
 --------------------
