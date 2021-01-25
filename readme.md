@@ -3,8 +3,7 @@ Common Build Specification
 ==========================
 
 This is the repository for the Common Build Specification; a mechanism for
-describing how to build and distribute a software package such that it may 
-be easily performed by any build tool.
+describing how to build and distribute a software package.
 
 If you have [Sphinx](http://www.sphinx-doc.org/) installed, the provided
 `Makefile` may also be used to render the latest version of the specification
